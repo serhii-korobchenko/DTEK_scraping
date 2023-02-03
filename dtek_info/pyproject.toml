@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "dtek-info"
+version = "0.1.0"
+description = ""
+authors = ["Serhii Korobchenko <jchild2008@gmail.com>"]
+readme = "README.md"
+packages = [{include = "dtek_info"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+scrapy = "^2.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,21 @@
+scrapy shell
+url = 'https://quotes.toscrape.com/'
+fetch(url)
+view(response)
+print(response.text)
+response.xpath("/html//small").extract()
+response.xpath("/html//small[@class='author']/text()").extract()
+
+
+scrapy startproject test_spyder
+scrapy genspider authors quotes.toscrape.com
+scrapy crawl authors_hw
+scrapy  crawl  quotes  -O  quotes.json
+scrapy  crawl  quotes  -o  quotes.jsonl
+scrapy crawl authors_detail
+scrapy crawl air_raid_alarms_kyiv
+scrapy crawl news
+
+scrapy shell https://www.dtek-kem.com.ua/ua/shutdowns
+table = response.xpath('/html/body/div[1]/div[1]/main')
+scrapy shell file:///D:/Test/test.mhtml
